@@ -41,5 +41,6 @@ struct Color: Codable {
 
 // MARK: - PhotoData
 struct PhotoData: Codable {
+    let all: [Int]
     let seoLinkM, seoLinkSX, seoLinkB, seoLinkF: String
 }

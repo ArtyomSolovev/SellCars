@@ -30,7 +30,7 @@ final class CollectionViewCell: UICollectionViewCell {
     private let costLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name:"HelveticaNeue-Bold",size:17)
-        label.textColor = .red// hexStringToUIColor(hex: "#F05454")
+        label.textColor = .hexStringToUIColor(hex: Constants.Color.red)
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -38,30 +38,26 @@ final class CollectionViewCell: UICollectionViewCell {
     
     private let rangeLabel: UILabel = {
         let label = UILabel()
-//        label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     private let engineLabel: UILabel = {
         let label = UILabel()
-//        label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     func setAnimal(car: Car){
-        let url = URL(string: car.photoData!.seoLinkB)!
-//        let data = try? Data(contentsOf: url)
-        
+        let url = URL(string: car.photoData!.seoLinkF)!
         dataProvider.downloadImage(url: url) { image in
-            self.imageView.image = image//UIImage(data: data!)
+            self.imageView.image = image
         }
         self.nameLabel.text = car.title
         self.costLabel.text = String(car.USD) + " $"
         self.rangeLabel.text = car.autoData?.race
         self.engineLabel.text = car.autoData?.fuelName
-        backgroundColor = hexStringToUIColor(hex: "#F5F5F5")
+        backgroundColor = UIColor.hexStringToUIColor(hex: Constants.Color.white)
     }
     
     override var isHighlighted: Bool {
@@ -137,28 +133,4 @@ final class CollectionViewCell: UICollectionViewCell {
 //        layer.borderWidth = 1
     }
 
-}
-
-extension CollectionViewCell {
-    func hexStringToUIColor (hex:String) -> UIColor {
-        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
-
-        if (cString.hasPrefix("#")) {
-            cString.remove(at: cString.startIndex)
-        }
-
-        if ((cString.count) != 6) {
-            return UIColor.gray
-        }
-
-        var rgbValue:UInt64 = 0
-        Scanner(string: cString).scanHexInt64(&rgbValue)
-
-        return UIColor(
-            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
-            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
-            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
-            alpha: CGFloat(1.0)
-        )
-    }
 }
