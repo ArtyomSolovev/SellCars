@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconCar" translatesAutoresizingMaskIntoConstraints="NO" id="fQm-9Q-2Oa">
-                                <rect key="frame" x="34" y="276" width="347" height="354"/>
+                                <rect key="frame" x="33.5" y="276" width="347" height="354"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="fQm-9Q-2Oa" secondAttribute="height" multiplier="347:354" id="Quz-wi-jeD"/>
                                 </constraints>

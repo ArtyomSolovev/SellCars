@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import SafariServices
+import CoreData
 
-class DetailViewController: UIViewController {
+final class DetailViewController: UIViewController {
 
     private var car: Car?
     private var galleryCollectionView = GalleryCollectionView()
@@ -27,34 +29,97 @@ class DetailViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    let scrollView: UIScrollView = {
+    private let scrollView: UIScrollView = {
         let v = UIScrollView()
         v.translatesAutoresizingMaskIntoConstraints = false
-        v.backgroundColor = UIColor.hexStringToUIColor(hex: Constants.Color.white)
         return v
+    }()
+    
+    private let buyButton: UIButton = {
+        let btn = UIButton()
+        btn.setTitle("Купить", for: .normal)
+        btn.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        btn.backgroundColor = .hexStringToUIColor(hex: Constants.Color.red)
+        btn.layer.cornerRadius = 25
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.layer.shadowRadius = 5
+        btn.layer.shadowOpacity = 0.3
+        btn.layer.shadowOffset = CGSize(width: 5, height: 8)
+        return btn
+    }()
+    
+    @objc func buttonAction(sender: UIButton!) {
+        if let url = URL(string: "https://auto.ria.com" + car!.linkToView) {
+            let vc = SFSafariViewController(url: url)
+            present(vc, animated: true)
+        }
+    }
+    
+//    private let addButton: UIButton = {
+//        let btn = UIButton()
+//        btn.setImage(UIImage(systemName: "square.and.arrow.down",
+//                             withConfiguration: UIImage.SymbolConfiguration(textStyle: .largeTitle)),
+//                     for: .normal)
+//        btn.addTarget(self, action: #selector(saveTask), for: .touchUpInside)
+//        btn.tintColor = .black
+//        btn.backgroundColor = .hexStringToUIColor(hex: Constants.Color.red)
+//        btn.layer.cornerRadius = 25
+//        btn.translatesAutoresizingMaskIntoConstraints = false
+//        btn.layer.shadowRadius = 5
+//        btn.layer.shadowOpacity = 0.3
+//        btn.layer.shadowOffset = CGSize(width: 5, height: 8)
+//        btn.layer.cornerRadius = 25
+//        return btn
+//    }()
+    
+//    @objc private func saveTask() {
+//
+//        let context = Constants.getContext()
+//
+//        guard let entity = NSEntityDescription.entity(forEntityName: "CarDB", in: context) else { return }
+//
+//        let taskObject = CarDB(entity: entity, insertInto: context)
+//        taskObject.userId = Int64(car!.userId)
+//        taskObject.title = car?.title
+//
+//        do {
+//            try context.save()
+//            addButton.isEnabled = false
+//            addButton.alpha = 0.5
+//        } catch let error as NSError {
+//            print(error.localizedDescription)
+//        }
+//    }
+    
+    private lazy var descriptionLabel: UILabel = {
+        let v = UILabel()
+        v.numberOfLines = 0
+        v.translatesAutoresizingMaskIntoConstraints = false
+        return v
+    }()
+    
+    private let customView: UIView = {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height))
+        return view
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = car?.title
+        view.backgroundColor = UIColor.hexStringToUIColor(hex: Constants.Color.white)
         
-        self.view.addSubview(scrollView)
-
+        view.addSubview(scrollView)
         scrollView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         scrollView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         scrollView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         
-        scrollView.addSubview(galleryCollectionView)
+        scrollView.addSubview(customView)
         
-        galleryCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        galleryCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        galleryCollectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 10).isActive = true
-        galleryCollectionView.heightAnchor.constraint(equalToConstant: view.bounds.height/2).isActive = true
+        self.configureCollectionView()
+        self.configureBuyButton()
+//        self.configureAddButton()
         
-        let arrayOfPhoto = getAllPhotos()
-        
-        self.galleryCollectionView.set(cells: arrayOfPhoto)
         
         self.fillLabelsWithData()
         self.fillingTheArray(arrayOfString: textInLabels, arrayOfLabels: &labels)
@@ -81,21 +146,49 @@ class DetailViewController: UIViewController {
         StackView.alignment = UIStackView.Alignment.center
         StackView.spacing   = 10.0
         StackView.translatesAutoresizingMaskIntoConstraints = false
-
-        let viewSupport = UIView()
-        scrollView.addSubview(viewSupport)
         
-        viewSupport.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        viewSupport.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        viewSupport.topAnchor.constraint(equalTo: galleryCollectionView.bottomAnchor, constant: 10).isActive = true
-        viewSupport.heightAnchor.constraint(equalToConstant: StackView.bounds.height).isActive = true
-
-        viewSupport.addSubview(StackView)
+        customView.addSubview(StackView)
         NSLayoutConstraint.activate([
-            StackView.topAnchor.constraint(equalTo: viewSupport.bottomAnchor),
-            StackView.leftAnchor.constraint(equalTo: viewSupport.leftAnchor),
+            StackView.topAnchor.constraint(equalTo: buyButton.bottomAnchor, constant: 10),
+            StackView.leftAnchor.constraint(equalTo: customView.leftAnchor),
         ])
+        
+        descriptionLabel.text = "Описание: " + (car?.autoData?.description)!
+        customView.addSubview(descriptionLabel)
+        descriptionLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        descriptionLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        descriptionLabel.topAnchor.constraint(equalTo: StackView.bottomAnchor, constant: 10).isActive = true
+        descriptionLabel.heightAnchor.constraint(equalToConstant: 300).isActive = true
+        
+        scrollView.contentSize = CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height*1.5)
     }
+    
+    
+    fileprivate func configureCollectionView() {
+        customView.addSubview(galleryCollectionView)
+        galleryCollectionView.leadingAnchor.constraint(equalTo: customView.leadingAnchor).isActive = true
+        galleryCollectionView.trailingAnchor.constraint(equalTo: customView.trailingAnchor).isActive = true
+        galleryCollectionView.topAnchor.constraint(equalTo: customView.topAnchor, constant: 10).isActive = true
+        galleryCollectionView.heightAnchor.constraint(equalToConstant: 300).isActive = true
+        let arrayOfPhoto = getAllPhotos()
+        galleryCollectionView.set(cells: arrayOfPhoto)
+    }
+    
+    fileprivate func configureBuyButton() {
+        customView.addSubview(buyButton)
+        buyButton.topAnchor.constraint(equalTo: galleryCollectionView.bottomAnchor, constant: 10).isActive = true
+        buyButton.leftAnchor.constraint(equalTo: customView.leftAnchor, constant: UIScreen.main.bounds.width/20).isActive = true
+        buyButton.widthAnchor.constraint(equalTo: customView.widthAnchor, multiplier: 0.4).isActive = true
+        buyButton.heightAnchor.constraint(equalTo: customView.widthAnchor, multiplier: 0.4).isActive = true
+    }
+    
+//    fileprivate func configureAddButton() {
+//        customView.addSubview(addButton)
+//        addButton.topAnchor.constraint(equalTo: galleryCollectionView.bottomAnchor, constant: 10).isActive = true
+//        addButton.leftAnchor.constraint(equalTo: buyButton.rightAnchor, constant: UIScreen.main.bounds.width/10).isActive = true
+//        addButton.widthAnchor.constraint(equalTo: customView.widthAnchor, multiplier: 0.4).isActive = true
+//        addButton.heightAnchor.constraint(equalTo: customView.widthAnchor, multiplier: 0.4).isActive = true
+//    }
     
     private func fillLabelsWithData(){
         guard let car = car else { return }
@@ -131,3 +224,4 @@ class DetailViewController: UIViewController {
         }
     }
 }
+

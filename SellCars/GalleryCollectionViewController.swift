@@ -24,7 +24,7 @@ class GalleryCollectionView: UICollectionView, UICollectionViewDelegate, UIColle
         
         translatesAutoresizingMaskIntoConstraints = false
         layout.minimumLineSpacing = 10
-        contentInset = UIEdgeInsets(top: 0, left: 40, bottom: 0, right: 40)
+        contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         
         
         showsHorizontalScrollIndicator = false
@@ -51,7 +51,7 @@ let cell = dequeueReusableCell(withReuseIdentifier: GalleryCollectionViewCell.re
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: UIScreen.main.bounds.width, height: frame.height * 0.8)
+        return CGSize(width: UIScreen.main.bounds.width, height: frame.height * 0.9)
     }
     
     required init?(coder aDecoder: NSCoder) {

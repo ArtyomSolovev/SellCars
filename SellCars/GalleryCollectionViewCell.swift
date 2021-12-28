@@ -27,7 +27,7 @@ class GalleryCollectionViewCell: UICollectionViewCell {
         // mainImageView constraints
         mainImageView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         mainImageView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        mainImageView.topAnchor.constraint(equalTo: topAnchor, constant: 40).isActive = true
+        mainImageView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         mainImageView.heightAnchor.constraint(equalTo: heightAnchor).isActive = true
     }
     
@@ -35,7 +35,7 @@ class GalleryCollectionViewCell: UICollectionViewCell {
         super.layoutSubviews()
         
         self.layer.cornerRadius = 5
-        self.layer.shadowRadius = 9
+        self.layer.shadowRadius = 5
         layer.shadowOpacity = 0.3
         layer.shadowOffset = CGSize(width: 5, height: 8)
         

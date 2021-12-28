@@ -24,13 +24,14 @@ final class CollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 0
         return label
     }()
     
     private let costLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name:"HelveticaNeue-Bold",size:17)
-        label.textColor = .hexStringToUIColor(hex: Constants.Color.red)
+        label.textColor = .hexStringToUIColor(hex: Constants.Color.black)
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -57,7 +58,7 @@ final class CollectionViewCell: UICollectionViewCell {
         self.costLabel.text = String(car.USD) + " $"
         self.rangeLabel.text = car.autoData?.race
         self.engineLabel.text = car.autoData?.fuelName
-        backgroundColor = UIColor.hexStringToUIColor(hex: Constants.Color.white)
+        backgroundColor = UIColor.hexStringToUIColor(hex: Constants.Color.red)
     }
     
     override var isHighlighted: Bool {
@@ -127,10 +128,12 @@ final class CollectionViewCell: UICollectionViewCell {
     }
     
     private func configureLayer() {
-        layer.cornerRadius = frame.height / 10
-        backgroundColor = UIColor.systemGray
-//        layer.borderColor = UIColor.darkGray.cgColor
-//        layer.borderWidth = 1
+//        backgroundColor = .hexStringToUIColor(hex: Constants.Color.red)
+        self.layer.cornerRadius = frame.height / 10
+//        self.backgroundColor = UIColor.systemGray
+        self.layer.shadowRadius = 5
+        self.layer.shadowOpacity = 0.3
+        self.layer.shadowOffset = CGSize(width: 5, height: 8)
     }
 
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 enum Constants {
     
@@ -16,14 +17,9 @@ enum Constants {
         static let black = "#121212"
     }
     
-    enum Store {
-        static let key = "SavedHistory"
-    }
-    
-    enum Alert {
-        static let title = "Attention"
-        static let message = "The search for artists did not give results, enter another artist"
-        static let ok = "Okey"
+    static func getContext() -> NSManagedObjectContext {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        return appDelegate.persistentContainer.viewContext
     }
 }
 

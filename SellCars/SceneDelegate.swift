@@ -15,19 +15,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        let tabs = self.createTabs()
-        window.rootViewController = tabs
+//        let tabs = self.createTabs()
+        let tableVC =  UINavigationController(rootViewController: LoginViewController())
+        window.rootViewController = tableVC
         window.makeKeyAndVisible()
         self.window = window
     }
     
 
     func sceneDidEnterBackground(_ scene: UIScene) {
-        // Called as the scene transitions from the foreground to the background.
-        // Use this method to save data, release shared resources, and store enough scene-specific state information
-        // to restore the scene back to its current state.
-
-        // Save changes in the application's managed object context when the application transitions to the background.
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
 
@@ -38,7 +34,7 @@ private extension SceneDelegate {
     func createTabs() -> UITabBarController {
         let tabBar = UITabBarController()
         let tableVC =  UINavigationController(rootViewController: ViewController())
-        let StorageVC = UINavigationController(rootViewController: ViewController())
+        let StorageVC = UINavigationController(rootViewController: LoginViewController())
         tableVC.tabBarItem = self.createTabForTablesVC()
         StorageVC.tabBarItem = self.createTabForCollectionVC()
 
