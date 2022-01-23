@@ -128,9 +128,7 @@ final class CollectionViewCell: UICollectionViewCell {
     }
     
     private func configureLayer() {
-//        backgroundColor = .hexStringToUIColor(hex: Constants.Color.red)
         self.layer.cornerRadius = frame.height / 10
-//        self.backgroundColor = UIColor.systemGray
         self.layer.shadowRadius = 5
         self.layer.shadowOpacity = 0.3
         self.layer.shadowOffset = CGSize(width: 5, height: 8)

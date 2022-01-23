@@ -7,24 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CB0BCE67DB1DCED07A5EBC1 /* Pods_SellCars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06412DD5ED1C44969F5B7B90 /* Pods_SellCars.framework */; };
 		AC3052A82779D8830094A82C /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3052A72779D8830094A82C /* DataProvider.swift */; };
 		AC3052AA2779F4990094A82C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3052A92779F4990094A82C /* Constants.swift */; };
 		AC3052AC277A02D80094A82C /* GalleryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3052AB277A02D80094A82C /* GalleryCollectionViewController.swift */; };
 		AC3052AE277A03E50094A82C /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3052AD277A03E50094A82C /* GalleryCollectionViewCell.swift */; };
-		AC3052B0277A80B40094A82C /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3052AF277A80B40094A82C /* TableViewController.swift */; };
-		AC3052B2277A8D070094A82C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3052B1277A8D070094A82C /* TableViewCell.swift */; };
-		AC3052B5277B05A90094A82C /* LoginScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3052B4277B05A90094A82C /* LoginScreenAssembly.swift */; };
-		AC3052B7277B05DE0094A82C /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3052B6277B05DE0094A82C /* LoginScreenViewController.swift */; };
-		AC3052B9277B06020094A82C /* LoginScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3052B8277B06020094A82C /* LoginScreenPresenter.swift */; };
-		AC3052BB277B061A0094A82C /* LoginScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3052BA277B061A0094A82C /* LoginScreenView.swift */; };
-		AC3052BD277B06450094A82C /* LoginScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3052BC277B06450094A82C /* LoginScreenRouter.swift */; };
-		AC3052BF277B06AC0094A82C /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3052BE277B06AC0094A82C /* UserModel.swift */; };
-		AC3052C1277B079E0094A82C /* UserDefaultsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3052C0277B079E0094A82C /* UserDefaultsStorage.swift */; };
-		AC3052C3277B0A890094A82C /* IUserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3052C2277B0A890094A82C /* IUserStorage.swift */; };
 		AC3052C5277B0EFB0094A82C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3052C4277B0EFB0094A82C /* User.swift */; };
 		AC3052C7277B0F9F0094A82C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3052C6277B0F9F0094A82C /* LoginViewController.swift */; };
 		AC3052C9277B13F10094A82C /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3052C8277B13F10094A82C /* StorageManager.swift */; };
 		AC37EEB12779CF3F0007955B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC37EEB02779CF3F0007955B /* DetailViewController.swift */; };
+		AC3A9396279D509100628C81 /* LoginScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3A9395279D509100628C81 /* LoginScreenAssembly.swift */; };
+		AC3A9398279D512800628C81 /* LoginScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3A9397279D512800628C81 /* LoginScreenRouter.swift */; };
 		AC5C252B2778AE590040F685 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5C252A2778AE590040F685 /* AppDelegate.swift */; };
 		AC5C252D2778AE590040F685 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5C252C2778AE590040F685 /* SceneDelegate.swift */; };
 		AC5C252F2778AE590040F685 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5C252E2778AE590040F685 /* ViewController.swift */; };
@@ -35,29 +28,21 @@
 		AC5C25482778C04D0040F685 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5C25472778C04D0040F685 /* Car.swift */; };
 		AC5C254A277904E40040F685 /* Cars.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5C2549277904E40040F685 /* Cars.swift */; };
 		AC5C254C277910AA0040F685 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5C254B277910AA0040F685 /* CollectionViewCell.swift */; };
-		CBEBA191BD611C2FE888FCB8 /* Pods_SellCars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC04AC699AC4F440836F804A /* Pods_SellCars.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3DAF729B744D1529AD44883A /* Pods-SellCars.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SellCars.debug.xcconfig"; path = "Target Support Files/Pods-SellCars/Pods-SellCars.debug.xcconfig"; sourceTree = "<group>"; };
+		06412DD5ED1C44969F5B7B90 /* Pods_SellCars.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SellCars.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FF64220A050A496E6ED77E3 /* Pods-SellCars.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SellCars.debug.xcconfig"; path = "Target Support Files/Pods-SellCars/Pods-SellCars.debug.xcconfig"; sourceTree = "<group>"; };
 		AC3052A72779D8830094A82C /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		AC3052A92779F4990094A82C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AC3052AB277A02D80094A82C /* GalleryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewController.swift; sourceTree = "<group>"; };
 		AC3052AD277A03E50094A82C /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
-		AC3052AF277A80B40094A82C /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		AC3052B1277A8D070094A82C /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		AC3052B4277B05A90094A82C /* LoginScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenAssembly.swift; sourceTree = "<group>"; };
-		AC3052B6277B05DE0094A82C /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
-		AC3052B8277B06020094A82C /* LoginScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenPresenter.swift; sourceTree = "<group>"; };
-		AC3052BA277B061A0094A82C /* LoginScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenView.swift; sourceTree = "<group>"; };
-		AC3052BC277B06450094A82C /* LoginScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenRouter.swift; sourceTree = "<group>"; };
-		AC3052BE277B06AC0094A82C /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		AC3052C0277B079E0094A82C /* UserDefaultsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStorage.swift; sourceTree = "<group>"; };
-		AC3052C2277B0A890094A82C /* IUserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IUserStorage.swift; sourceTree = "<group>"; };
 		AC3052C4277B0EFB0094A82C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		AC3052C6277B0F9F0094A82C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = SellCars/LoginViewController.swift; sourceTree = SOURCE_ROOT; };
+		AC3052C6277B0F9F0094A82C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = SellCars/Login/LoginViewController.swift; sourceTree = SOURCE_ROOT; };
 		AC3052C8277B13F10094A82C /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		AC37EEB02779CF3F0007955B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		AC3A9395279D509100628C81 /* LoginScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenAssembly.swift; sourceTree = "<group>"; };
+		AC3A9397279D512800628C81 /* LoginScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenRouter.swift; sourceTree = "<group>"; };
 		AC5C25272778AE590040F685 /* SellCars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SellCars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC5C252A2778AE590040F685 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC5C252C2778AE590040F685 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,8 +55,7 @@
 		AC5C25472778C04D0040F685 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		AC5C2549277904E40040F685 /* Cars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cars.swift; sourceTree = "<group>"; };
 		AC5C254B277910AA0040F685 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
-		CC04AC699AC4F440836F804A /* Pods_SellCars.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SellCars.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC175FED10251473F909C894 /* Pods-SellCars.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SellCars.release.xcconfig"; path = "Target Support Files/Pods-SellCars/Pods-SellCars.release.xcconfig"; sourceTree = "<group>"; };
+		C117B9B5C82DA09D6F553155 /* Pods-SellCars.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SellCars.release.xcconfig"; path = "Target Support Files/Pods-SellCars/Pods-SellCars.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBEBA191BD611C2FE888FCB8 /* Pods_SellCars.framework in Frameworks */,
+				3CB0BCE67DB1DCED07A5EBC1 /* Pods_SellCars.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,33 +73,87 @@
 		30A9EE12CD1C960560F92613 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3DAF729B744D1529AD44883A /* Pods-SellCars.debug.xcconfig */,
-				DC175FED10251473F909C894 /* Pods-SellCars.release.xcconfig */,
+				2FF64220A050A496E6ED77E3 /* Pods-SellCars.debug.xcconfig */,
+				C117B9B5C82DA09D6F553155 /* Pods-SellCars.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		94D16A3C1CFDE753F3991C4D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				CC04AC699AC4F440836F804A /* Pods_SellCars.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		AC3052B3277B04DA0094A82C /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				AC3052B4277B05A90094A82C /* LoginScreenAssembly.swift */,
-				AC3052C2277B0A890094A82C /* IUserStorage.swift */,
-				AC3052C0277B079E0094A82C /* UserDefaultsStorage.swift */,
-				AC3052B6277B05DE0094A82C /* LoginScreenViewController.swift */,
-				AC3052B8277B06020094A82C /* LoginScreenPresenter.swift */,
-				AC3052BA277B061A0094A82C /* LoginScreenView.swift */,
-				AC3052BC277B06450094A82C /* LoginScreenRouter.swift */,
-				AC3052BE277B06AC0094A82C /* UserModel.swift */,
+				AC3A9395279D509100628C81 /* LoginScreenAssembly.swift */,
+				AC3A9397279D512800628C81 /* LoginScreenRouter.swift */,
+				AC3052C6277B0F9F0094A82C /* LoginViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		AC3052CA277B33440094A82C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				AC5C25452778B3220040F685 /* Network.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		AC3052CB277B33630094A82C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				AC3052C8277B13F10094A82C /* StorageManager.swift */,
+				AC3052A72779D8830094A82C /* DataProvider.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		AC3052CC277B33700094A82C /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				AC5C252A2778AE590040F685 /* AppDelegate.swift */,
+				AC5C252C2778AE590040F685 /* SceneDelegate.swift */,
+				AC5C25382778AE5A0040F685 /* LaunchScreen.storyboard */,
+				AC5C25362778AE5A0040F685 /* Assets.xcassets */,
+				AC5C253B2778AE5A0040F685 /* Info.plist */,
+				AC3052A92779F4990094A82C /* Constants.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		AC3052CD277B34F90094A82C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AC5C2549277904E40040F685 /* Cars.swift */,
+				AC5C25472778C04D0040F685 /* Car.swift */,
+				AC3052C4277B0EFB0094A82C /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AC3052CE277B372E0094A82C /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				AC5C252E2778AE590040F685 /* ViewController.swift */,
+				AC5C254B277910AA0040F685 /* CollectionViewCell.swift */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
+		AC3052CF277B377A0094A82C /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				AC37EEB02779CF3F0007955B /* DetailViewController.swift */,
+				AC3052D0277B37920094A82C /* Gallery */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		AC3052D0277B37920094A82C /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				AC3052AB277A02D80094A82C /* GalleryCollectionViewController.swift */,
+				AC3052AD277A03E50094A82C /* GalleryCollectionViewCell.swift */,
+			);
+			path = Gallery;
 			sourceTree = "<group>";
 		};
 		AC5C251E2778AE590040F685 = {
@@ -124,7 +162,7 @@
 				AC5C25292778AE590040F685 /* SellCars */,
 				AC5C25282778AE590040F685 /* Products */,
 				30A9EE12CD1C960560F92613 /* Pods */,
-				94D16A3C1CFDE753F3991C4D /* Frameworks */,
+				F340A1D5D0808D5D17DCAF3C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,30 +177,24 @@
 		AC5C25292778AE590040F685 /* SellCars */ = {
 			isa = PBXGroup;
 			children = (
-				AC3052C4277B0EFB0094A82C /* User.swift */,
-				AC3052C8277B13F10094A82C /* StorageManager.swift */,
-				AC3052C6277B0F9F0094A82C /* LoginViewController.swift */,
+				AC3052CD277B34F90094A82C /* Model */,
+				AC3052CB277B33630094A82C /* Data */,
+				AC3052CA277B33440094A82C /* Network */,
 				AC3052B3277B04DA0094A82C /* Login */,
-				AC5C252A2778AE590040F685 /* AppDelegate.swift */,
-				AC5C252C2778AE590040F685 /* SceneDelegate.swift */,
-				AC3052A72779D8830094A82C /* DataProvider.swift */,
-				AC5C25452778B3220040F685 /* Network.swift */,
-				AC5C252E2778AE590040F685 /* ViewController.swift */,
-				AC5C254B277910AA0040F685 /* CollectionViewCell.swift */,
-				AC3052A92779F4990094A82C /* Constants.swift */,
-				AC37EEB02779CF3F0007955B /* DetailViewController.swift */,
-				AC3052AB277A02D80094A82C /* GalleryCollectionViewController.swift */,
-				AC3052AD277A03E50094A82C /* GalleryCollectionViewCell.swift */,
-				AC5C2549277904E40040F685 /* Cars.swift */,
-				AC5C25472778C04D0040F685 /* Car.swift */,
-				AC5C25362778AE5A0040F685 /* Assets.xcassets */,
-				AC5C25382778AE5A0040F685 /* LaunchScreen.storyboard */,
-				AC5C253B2778AE5A0040F685 /* Info.plist */,
+				AC3052CE277B372E0094A82C /* Shop */,
+				AC3052CF277B377A0094A82C /* Detail */,
+				AC3052CC277B33700094A82C /* SupportingFiles */,
 				AC5C25332778AE590040F685 /* SellCars.xcdatamodeld */,
-				AC3052AF277A80B40094A82C /* TableViewController.swift */,
-				AC3052B1277A8D070094A82C /* TableViewCell.swift */,
 			);
 			path = SellCars;
+			sourceTree = "<group>";
+		};
+		F340A1D5D0808D5D17DCAF3C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06412DD5ED1C44969F5B7B90 /* Pods_SellCars.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,11 +204,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC5C253E2778AE5A0040F685 /* Build configuration list for PBXNativeTarget "SellCars" */;
 			buildPhases = (
-				297283CFE66D43E1BC35FB5A /* [CP] Check Pods Manifest.lock */,
+				2A9BDB21B79684F64DB6A036 /* [CP] Check Pods Manifest.lock */,
 				AC5C25232778AE590040F685 /* Sources */,
 				AC5C25242778AE590040F685 /* Frameworks */,
 				AC5C25252778AE590040F685 /* Resources */,
-				354E3918587FF732D4ADF9D2 /* [CP] Embed Pods Frameworks */,
+				2DF19D630B9CD13BDBDECEE6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,7 +265,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		297283CFE66D43E1BC35FB5A /* [CP] Check Pods Manifest.lock */ = {
+		2A9BDB21B79684F64DB6A036 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -255,7 +287,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		354E3918587FF732D4ADF9D2 /* [CP] Embed Pods Frameworks */ = {
+		2DF19D630B9CD13BDBDECEE6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -279,30 +311,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC3052B2277A8D070094A82C /* TableViewCell.swift in Sources */,
-				AC3052BF277B06AC0094A82C /* UserModel.swift in Sources */,
 				AC37EEB12779CF3F0007955B /* DetailViewController.swift in Sources */,
-				AC3052B0277A80B40094A82C /* TableViewController.swift in Sources */,
 				AC3052AA2779F4990094A82C /* Constants.swift in Sources */,
 				AC5C25462778B3220040F685 /* Network.swift in Sources */,
 				AC3052A82779D8830094A82C /* DataProvider.swift in Sources */,
-				AC3052C3277B0A890094A82C /* IUserStorage.swift in Sources */,
 				AC5C252F2778AE590040F685 /* ViewController.swift in Sources */,
-				AC3052B7277B05DE0094A82C /* LoginScreenViewController.swift in Sources */,
-				AC3052BD277B06450094A82C /* LoginScreenRouter.swift in Sources */,
-				AC3052C1277B079E0094A82C /* UserDefaultsStorage.swift in Sources */,
-				AC3052BB277B061A0094A82C /* LoginScreenView.swift in Sources */,
 				AC3052C7277B0F9F0094A82C /* LoginViewController.swift in Sources */,
+				AC3A9398279D512800628C81 /* LoginScreenRouter.swift in Sources */,
 				AC5C254C277910AA0040F685 /* CollectionViewCell.swift in Sources */,
 				AC5C25482778C04D0040F685 /* Car.swift in Sources */,
 				AC3052AC277A02D80094A82C /* GalleryCollectionViewController.swift in Sources */,
 				AC5C252B2778AE590040F685 /* AppDelegate.swift in Sources */,
 				AC5C25352778AE590040F685 /* SellCars.xcdatamodeld in Sources */,
 				AC5C252D2778AE590040F685 /* SceneDelegate.swift in Sources */,
-				AC3052B5277B05A90094A82C /* LoginScreenAssembly.swift in Sources */,
 				AC3052C5277B0EFB0094A82C /* User.swift in Sources */,
+				AC3A9396279D509100628C81 /* LoginScreenAssembly.swift in Sources */,
 				AC3052AE277A03E50094A82C /* GalleryCollectionViewCell.swift in Sources */,
-				AC3052B9277B06020094A82C /* LoginScreenPresenter.swift in Sources */,
 				AC5C254A277904E40040F685 /* Cars.swift in Sources */,
 				AC3052C9277B13F10094A82C /* StorageManager.swift in Sources */,
 			);
@@ -440,7 +464,7 @@
 		};
 		AC5C253F2778AE5A0040F685 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3DAF729B744D1529AD44883A /* Pods-SellCars.debug.xcconfig */;
+			baseConfigurationReference = 2FF64220A050A496E6ED77E3 /* Pods-SellCars.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -448,7 +472,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RWNR5M53QM;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SellCars/Info.plist;
+				INFOPLIST_FILE = SellCars/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -469,7 +493,7 @@
 		};
 		AC5C25402778AE5A0040F685 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC175FED10251473F909C894 /* Pods-SellCars.release.xcconfig */;
+			baseConfigurationReference = C117B9B5C82DA09D6F553155 /* Pods-SellCars.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -477,7 +501,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RWNR5M53QM;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SellCars/Info.plist;
+				INFOPLIST_FILE = SellCars/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

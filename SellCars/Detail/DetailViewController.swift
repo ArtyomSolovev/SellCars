@@ -54,43 +54,6 @@ final class DetailViewController: UIViewController {
             present(vc, animated: true)
         }
     }
-    
-//    private let addButton: UIButton = {
-//        let btn = UIButton()
-//        btn.setImage(UIImage(systemName: "square.and.arrow.down",
-//                             withConfiguration: UIImage.SymbolConfiguration(textStyle: .largeTitle)),
-//                     for: .normal)
-//        btn.addTarget(self, action: #selector(saveTask), for: .touchUpInside)
-//        btn.tintColor = .black
-//        btn.backgroundColor = .hexStringToUIColor(hex: Constants.Color.red)
-//        btn.layer.cornerRadius = 25
-//        btn.translatesAutoresizingMaskIntoConstraints = false
-//        btn.layer.shadowRadius = 5
-//        btn.layer.shadowOpacity = 0.3
-//        btn.layer.shadowOffset = CGSize(width: 5, height: 8)
-//        btn.layer.cornerRadius = 25
-//        return btn
-//    }()
-    
-//    @objc private func saveTask() {
-//
-//        let context = Constants.getContext()
-//
-//        guard let entity = NSEntityDescription.entity(forEntityName: "CarDB", in: context) else { return }
-//
-//        let taskObject = CarDB(entity: entity, insertInto: context)
-//        taskObject.userId = Int64(car!.userId)
-//        taskObject.title = car?.title
-//
-//        do {
-//            try context.save()
-//            addButton.isEnabled = false
-//            addButton.alpha = 0.5
-//        } catch let error as NSError {
-//            print(error.localizedDescription)
-//        }
-//    }
-    
     private lazy var descriptionLabel: UILabel = {
         let v = UILabel()
         v.numberOfLines = 0
@@ -118,7 +81,6 @@ final class DetailViewController: UIViewController {
         
         self.configureCollectionView()
         self.configureBuyButton()
-//        self.configureAddButton()
         
         
         self.fillLabelsWithData()
@@ -177,18 +139,10 @@ final class DetailViewController: UIViewController {
     fileprivate func configureBuyButton() {
         customView.addSubview(buyButton)
         buyButton.topAnchor.constraint(equalTo: galleryCollectionView.bottomAnchor, constant: 10).isActive = true
-        buyButton.leftAnchor.constraint(equalTo: customView.leftAnchor, constant: UIScreen.main.bounds.width/20).isActive = true
-        buyButton.widthAnchor.constraint(equalTo: customView.widthAnchor, multiplier: 0.4).isActive = true
-        buyButton.heightAnchor.constraint(equalTo: customView.widthAnchor, multiplier: 0.4).isActive = true
+        buyButton.leftAnchor.constraint(equalTo: customView.leftAnchor, constant: UIScreen.main.bounds.width/10).isActive = true
+        buyButton.widthAnchor.constraint(equalTo: customView.widthAnchor, multiplier: 0.8).isActive = true
+        buyButton.heightAnchor.constraint(equalTo: customView.widthAnchor, multiplier: 0.2).isActive = true
     }
-    
-//    fileprivate func configureAddButton() {
-//        customView.addSubview(addButton)
-//        addButton.topAnchor.constraint(equalTo: galleryCollectionView.bottomAnchor, constant: 10).isActive = true
-//        addButton.leftAnchor.constraint(equalTo: buyButton.rightAnchor, constant: UIScreen.main.bounds.width/10).isActive = true
-//        addButton.widthAnchor.constraint(equalTo: customView.widthAnchor, multiplier: 0.4).isActive = true
-//        addButton.heightAnchor.constraint(equalTo: customView.widthAnchor, multiplier: 0.4).isActive = true
-//    }
     
     private func fillLabelsWithData(){
         guard let car = car else { return }

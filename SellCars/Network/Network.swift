@@ -19,7 +19,6 @@ final class Network {
                 do {
                     let result = try JSONDecoder().decode(Cars.self, from: data)
                     complition(result)
-                    print(result)
                 } catch {
                     print(error.localizedDescription)
                 }
@@ -35,11 +34,9 @@ final class Network {
         let session = URLSession.shared
         session.dataTask(with: url) { (data, response, error) in
             if let data = data {
-                print(url)
                 do {
                     let result = try JSONDecoder().decode(Car.self, from: data)
                     complition(result)
-                    print(result)
                 } catch {
                     print(error.localizedDescription)
                 }
